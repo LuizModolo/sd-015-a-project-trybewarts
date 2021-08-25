@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
@@ -44,35 +44,60 @@
                 </div>
             </div>
             <hr>
-            <div>
-                <label id="label-family" for="family-type">Qual sua família?
-                    <input id="family-type" type="radio" name="family" value="Frontend">Frontend
-                    <input id="family-type" type="radio" name="family" value="Backend">Backend
-                    <input id="family-type" type="radio" name="family" value="FullStack">FullStack
-                </label>
-                <label id="label-content" for="learn-type">Qual conteúdo você está com mais vontade de aprender?
-                    <input id="learn-type" type="checkbox" value="HoFs">HoFs
-                    <input id="learn-type" type="checkbox" value="Jest">Jest
-                    <input id="learn-type" type="checkbox" value="Promises">Promises
-                    <input id="learn-type" type="checkbox" value="React">React
-                    <input id="learn-type" type="checkbox" value="SQL">SQL
-                    <input id="learn-type" type="checkbox" value="Python">Python
-                </label>
+            <div class="family-learn">
+                <div class="family-radio">
+                    <label class="label" id="label-family">Qual sua família?</label>
+                    <div class="family-options">
+                            <label class="radio" for="">
+                                <input class="family-radio-first" id="family-type" type="radio" name="family" value="Frontend">Frontend
+                            </label>
+                            <label class="radio" for="">
+                                <input id="family-type" type="radio" name="family" value="Backend">Backend
+                            </label>
+                            <label class="radio" for="">
+                                <input id="family-type" type="radio" name="family" value="FullStack">FullStack
+                            </label>
+                    </div>
+                </div>
+                <div class="learn-content">
+                    <label id="label-content" class="label" for="learn-type">Qual conteúdo você está com mais vontade de aprender?</label>
+                    <div class="learn-options">
+                        <label class="checkbox" for="learn-hofs">
+                            <input id="learn-hofs" type="checkbox" value="HoFs">HoFs
+                        </label>
+                        <label class="checkbox" for="learn-jest">
+                            <input id="learn-jest" type="checkbox" value="Jest">Jest
+                        </label>
+                        <label class="checkbox" for="learn-promises">
+                            <input id="learn-promises" type="checkbox" value="Promises">Promises
+                        </label>
+                        <label class="checkbox" for="learn-react">
+                            <input id="learn-react" type="checkbox" value="React">React
+                        </label>
+                        <label class="checkbox" for="learn-sql">
+                            <input id="learn-sql" type="checkbox" value="SQL">SQL
+                        </label>
+                        <label class="checkbox" for="learn-python">
+                            <input id="learn-python" type="checkbox" value="Python">Python
+                        </label>
+                    </div>
+                </div>
             </div>
             <hr>
-            <div>
-                <label id="label-rate" for="avaliation">Como você avalia a Trybewarts?
-                    <input id="avaliation" name="rate" value="1" type="radio">1
-                    <input id="avaliation" name="rate" value="2" type="radio">2
-                    <input id="avaliation" name="rate" value="3" type="radio">3
-                    <input id="avaliation" name="rate" value="4" type="radio">4
-                    <input id="avaliation" name="rate" value="5" type="radio">5
-                    <input id="avaliation" name="rate" value="6" type="radio">6
-                    <input id="avaliation" name="rate" value="7" type="radio">7
-                    <input id="avaliation" name="rate" value="8" type="radio">8
-                    <input id="avaliation" name="rate" value="9" type="radio">9
-                    <input id="avaliation" name="rate" value="10" type="radio">10
-                </label>
+            <div >
+                <div>
+                    <label id="label-rate" for="avaliation">Como você avalia a Trybewarts?</label>
+                        <input id="avaliation" name="rate" value="1" type="radio">1
+                        <input id="avaliation" name="rate" value="2" type="radio">2
+                        <input id="avaliation" name="rate" value="3" type="radio">3
+                        <input id="avaliation" name="rate" value="4" type="radio">4
+                        <input id="avaliation" name="rate" value="5" type="radio">5
+                        <input id="avaliation" name="rate" value="6" type="radio">6
+                        <input id="avaliation" name="rate" value="7" type="radio">7
+                        <input id="avaliation" name="rate" value="8" type="radio">8
+                        <input id="avaliation" name="rate" value="9" type="radio">9
+                        <input id="avaliation" name="rate" value="10" type="radio">10
+                </div>
                 <label class="textarea" for="coment">Deixe seu comentário:
                     <textarea name="comentario" id="coment" cols="30" rows="10" maxlength="500"></textarea>
                 </label>

@@ -47,7 +47,7 @@
 }
 
 #trybewarts-forms-logo {
-  width: 500px;
+  height: 500px;
 }
 
 #evaluation-form h2 {
@@ -86,4 +86,44 @@
 
 .label {
   margin-right: 10px;
+}
+
+hr {
+  width: 678px;
+  height: 1px;
+  border: none;
+  background-color: gray;
+}
+
+.family-radio {
+  display: flex;
+  flex-direction: column;
+}
+
+.family-learn {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.family-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.family-radio-first {
+  margin-left: 8px;
+}
+
+.learn-options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.learn-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.learn-options label {
+  margin-right: 15px;
 }
