@@ -1,0 +1,37 @@
+* {
+  font-family: serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header-trybewarts {
+  display: flex;
+  background-color: rgb(50, 167, 145);
+  height: 60px;
+  justify-content: space-evenly;
+  padding: 0 10%;
+}
+
+#trybewarts-header-title {
+  align-self: center;
+  color: white;
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.trybewarts-header-logo {
+  flex: 0 1 auto;
+}
+
+.trybewarts-login {
+  display: flex;
+  align-items: center;
+  flex: 0 1 auto;
+}
+
+.trybewarts-login input {
+  margin-right: 7px;
+  height: 30px;
+  border: solid grey 1px;
+  border-radius: 10%;
+}
