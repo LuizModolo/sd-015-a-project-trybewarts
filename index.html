@@ -6,30 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 <body>
-    <header class="header-trybewarts">
+    <header class="header">
         <img src="images/trybewarts-header-logo.svg" class="trybewarts-header-logo" alt="logo pequeno trybewarts">
         <h1 id="trybewarts-header-title">Trybewarts</h1>
         <form class="trybewarts-login">
-            <input type="email" name="email" placeholder="Email">
-            <input type="password" name="password" placeholder="Senha">
-            <button>Entrar</button>
+            <input type="email" class="input is-rounded" name="email" placeholder="Email">
+            <input type="password" class="input is-rounded" name="password" placeholder="Senha">
+            <button class="button is-primary">Entrar</button>
         </form>
     </header>
-    <main>
+    <main class="main">
         <form action="" id="evaluation-form">
-            <h2></h2>
-            <div>
-                <input type="text" id="input-name" name="Nome" placeholder="Nome">
-                <input type="text" id="input-lastname" name="Sobrenome" placeholder="Sobrenome">
-                <input type="email" id="input-email" name="Email" placeholder="Email">
-                <select name="" id="house">
-                    <option value="Gitnória" id="gitnoria-house">Gitnória</option>
-                    <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
-                    <option value="Corvinode" id="corvinode-house">Corvinode</option>
-                    <option value="Pytherina" id="pytherina-house">Pytherina</option>
-                </select>
+            <h2>Formulário de Avaliação</h2>
+            <div class="form-first">
+                <div class="name-lastname">
+                    <input type="text" class="input is-success" id="input-name" name="Nome" placeholder="Nome">
+                    <input type="text" class="input is-success" id="input-lastname" name="Sobrenome" placeholder="Sobrenome">
+                </div>
+                <div class="email-house">
+                    <input type="email" class="input is-success" id="input-email" name="Email" placeholder="Email">
+                    <div id="selected-house-div">
+                        <label class="label">Casa: </label>
+                        <div class="control">
+                            <div class="select">
+                                <select class="is-focused" name="" id="house">
+                                    <option value="Gitnória" id="gitnoria-house">Gitnória</option>
+                                    <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
+                                    <option value="Corvinode" id="corvinode-house">Corvinode</option>
+                                    <option value="Pytherina" id="pytherina-house">Pytherina</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <hr>
             <div>
