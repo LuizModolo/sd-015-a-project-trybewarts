@@ -23,3 +23,16 @@ function checkAgrement() {
 }
 const checkboxAgrement = document.querySelector('#agreement');
 checkboxAgrement.addEventListener('click', checkAgrement);
+
+function countCaracter(event) {
+  const campoNovo = document.querySelector('.caracter-count');
+  const alvoEscrita = event.target;
+  let result = null;
+  let resultImpresso = '';
+  result = 500 - alvoEscrita.value.length;
+  resultImpresso = `${result} caracteres faltantes`;
+  campoNovo.innerText = resultImpresso;
+}
+
+const textAreaField = document.querySelector('#coment');
+textAreaField.addEventListener('input', countCaracter);
