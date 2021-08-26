@@ -32,7 +32,7 @@ function countCaracter(event) {
   campoNovo.innerText = result;
 }
 
-const textAreaField = document.querySelector('#coment');
+const textAreaField = document.querySelector('#textarea');
 textAreaField.addEventListener('input', countCaracter);
 
 function printCabecalho() {
