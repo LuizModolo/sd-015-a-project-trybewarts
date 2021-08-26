@@ -28,10 +28,8 @@ function countCaracter(event) {
   const campoNovo = document.querySelector('.caracter-count');
   const alvoEscrita = event.target;
   let result = null;
-  let resultImpresso = '';
   result = 500 - alvoEscrita.value.length;
-  resultImpresso = `${result} caracteres faltantes`;
-  campoNovo.innerText = resultImpresso;
+  campoNovo.innerText = result;
 }
 
 const textAreaField = document.querySelector('#coment');
@@ -39,11 +37,10 @@ textAreaField.addEventListener('input', countCaracter);
 
 function printCabecalho() {
   const inputsElements = document.querySelectorAll('.clear-input');
-  let answerHeader = '';
-  for (let i = 0; i < inputsElements.length; i += 1) {
-    answerHeader += `${inputsElements[i].name}: ${inputsElements[i].value}\n`;
-  }
-  return answerHeader;
+  let ansHeader = '';
+  ansHeader += `${inputsElements[0].name}: ${inputsElements[0].value} ${inputsElements[1].value}\n`;
+  ansHeader += `${inputsElements[2].name}: ${inputsElements[2].value}\n`;
+  return ansHeader;
 }
 
 function printCasa() {
