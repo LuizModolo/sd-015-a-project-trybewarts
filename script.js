@@ -36,3 +36,49 @@ function countCaracter(event) {
 
 const textAreaField = document.querySelector('#coment');
 textAreaField.addEventListener('input', countCaracter);
+
+function printCabecalho() {
+  const inputsElements = document.querySelectorAll('.clear-input');
+  let answerHeader = '';
+  for (let i = 0; i < inputsElements.length; i += 1) {
+    answerHeader += `${inputsElements[i].name}: ${inputsElements[i].value}\n`;
+  }
+  return answerHeader;
+}
+
+function printCasa() {
+  const labelCasa = document.querySelector('#house');
+  let answerHouse = '';
+  answerHouse += `${labelCasa.name}: ${labelCasa.value}\n`;
+  return answerHouse;
+}
+
+function printRadioCheckbox() {
+  const labelFamilyRatio = document.querySelector('input[name="family"]:checked').value;
+  const labelLearnCheck = document.querySelectorAll('input[name="learn"]:checked');
+  let answerRatioCheckbox = '';
+  let subjectsDev = '';
+  answerRatioCheckbox = `Família: ${labelFamilyRatio}\n`;
+  for (let i = 0; i < labelLearnCheck.length; i += 1) {
+    subjectsDev += `${labelLearnCheck[i].value} `;
+  }
+  answerRatioCheckbox += `Matérias: ${subjectsDev}\n`;
+  return answerRatioCheckbox;
+}
+
+function printAvaliation() {
+  const labelRateRatio = document.querySelector('input[name="rate"]:checked').value;
+  let answerAvaliation = '';
+  answerAvaliation = `Avaliação: ${labelRateRatio}\n`;
+  answerAvaliation += `Observações: ${textAreaField.value}`;
+  return answerAvaliation;
+}
+
+function printForm(event) {
+  event.preventDefault();
+  const respParagra = document.querySelector('.respostas');
+  respParagra.innerText = printCabecalho() + printCasa() + printRadioCheckbox() + printAvaliation();
+}
+
+const btnSubmit = document.querySelector('#submit-btn');
+btnSubmit.addEventListener('click', printForm);

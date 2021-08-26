@@ -23,16 +23,16 @@
             <h2>Formulário de Avaliação</h2>
             <div class="form-first">
                 <div class="name-lastname">
-                    <input type="text" class="input is-success" id="input-name" name="Nome" placeholder="Nome">
-                    <input type="text" class="input is-success" id="input-lastname" name="Sobrenome" placeholder="Sobrenome">
+                    <input type="text" class="input is-success clear-input" id="input-name" name="Nome" placeholder="Nome">
+                    <input type="text" class="input is-success clear-input" id="input-lastname" name="Sobrenome" placeholder="Sobrenome">
                 </div>
                 <div class="email-house">
-                    <input type="email" class="input is-success" id="input-email" name="Email" placeholder="Email">
+                    <input type="email" class="input is-success clear-input" id="input-email" name="Email" placeholder="Email">
                     <div id="selected-house-div">
                         <label class="label">Casa: </label>
                         <div class="control">
                             <div class="select">
-                                <select class="is-focused" name="" id="house">
+                                <select class="is-focused" name="Casa" id="house">
                                     <option value="Gitnória" id="gitnoria-house">Gitnória</option>
                                     <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
                                     <option value="Corvinode" id="corvinode-house">Corvinode</option>
@@ -63,22 +63,22 @@
                     <label id="label-content" class="label" for="learn-type">Qual conteúdo você está com mais vontade de aprender?</label>
                     <div class="learn-options">
                         <label class="checkbox" for="learn-hofs">
-                            <input id="learn-hofs" type="checkbox" value="HoFs">HoFs
+                            <input id="learn-hofs" type="checkbox" class="subject" name="learn" value="HoFs">HoFs
                         </label>
                         <label class="checkbox" for="learn-jest">
-                            <input id="learn-jest" type="checkbox" value="Jest">Jest
+                            <input id="learn-jest" type="checkbox" class="subject" name="learn" value="Jest">Jest
                         </label>
                         <label class="checkbox" for="learn-promises">
-                            <input id="learn-promises" type="checkbox" value="Promises">Promises
+                            <input id="learn-promises" type="checkbox" class="subject" name="learn" value="Promises">Promises
                         </label>
                         <label class="checkbox" for="learn-react">
-                            <input id="learn-react" type="checkbox" value="React">React
+                            <input id="learn-react" type="checkbox" class="subject" name="learn" value="React">React
                         </label>
                         <label class="checkbox" for="learn-sql">
-                            <input id="learn-sql" type="checkbox" value="SQL">SQL
+                            <input id="learn-sql" type="checkbox" class="subject" name="learn" value="SQL">SQL
                         </label>
                         <label class="checkbox" for="learn-python">
-                            <input id="learn-python" type="checkbox" value="Python">Python
+                            <input id="learn-python" type="checkbox" class="subject" name="learn" value="Python">Python
                         </label>
                     </div>
                 </div>
@@ -121,9 +121,9 @@
                     </div>
                 </div>
                 <div class="comment-option">
-                    <label class="label" for="coment">Deixe seu comentário:</label>
+                    <label class="label textarea" for="coment">Deixe seu comentário:</label>
                     <textarea class="textarea has-fixed-size is-success" name="comentario" id="coment" cols="30" rows="3" maxlength="500"></textarea>
-                    <p class="caracter-count"></p>
+                    <p id="counter" class="caracter-count"></p>
                 </div>
                 <div class="submit-agreement">
                     <div>
@@ -134,6 +134,7 @@
                     <button type="submit" class="button is-link" id="submit-btn" disabled>Enviar</button>
                 </div>
             </div>
+            <p class="respostas"></p>
         </form>
         <img src="images/trybewarts-colored.svg" id="trybewarts-forms-logo" alt="logo-grande-trybewarts">
     </main>
