@@ -13,9 +13,9 @@
         <img src="images/trybewarts-header-logo.svg" class="trybewarts-header-logo" alt="logo pequeno trybewarts">
         <h1 id="trybewarts-header-title">Trybewarts</h1>
         <form class="trybewarts-login">
-            <input type="email" class="input is-rounded" name="email" placeholder="Email">
-            <input type="password" class="input is-rounded" name="password" placeholder="Senha">
-            <button class="button is-link">Entrar</button>
+            <input type="email" id="email" class="input is-rounded" name="email" placeholder="Email">
+            <input type="password" id="senha" class="input is-rounded" name="password" placeholder="Senha">
+            <button id="login-btn" class="button is-link">Entrar</button>
         </form>
     </header>
     <main class="main">
@@ -127,10 +127,10 @@
                 <div class="submit-agreement">
                     <div>
                         <label id="label-infos" class="checkbox label" for="agreement">Você concorda com o uso das informações acima?
-                            <input id="agreement" type="checkbox">
+                            <input name="bnt-agrement" value="on" id="agreement" type="checkbox">
                         </label>
                     </div>
-                    <button type="submit" class="button is-link" id="submit-btn">Enviar</button>
+                    <button type="submit" class="button is-link" id="submit-btn" disabled>Enviar</button>
                 </div>
             </div>
         </form>
