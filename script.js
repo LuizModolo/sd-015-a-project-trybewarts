@@ -54,12 +54,12 @@ function printRadioCheckbox() {
   const labelFamilyRatio = document.querySelector('input[name="family"]:checked').value;
   const labelLearnCheck = document.querySelectorAll('input[name="learn"]:checked');
   let answerRatioCheckbox = '';
-  let subjectsDev = '';
+  const subjectsDev = [];
   answerRatioCheckbox = `Família: ${labelFamilyRatio}\n`;
   for (let i = 0; i < labelLearnCheck.length; i += 1) {
-    subjectsDev += `${labelLearnCheck[i].value} `;
+    subjectsDev.push(labelLearnCheck[i].value);
   }
-  answerRatioCheckbox += `Matérias: ${subjectsDev}\n`;
+  answerRatioCheckbox += `Matérias: ${subjectsDev.join(', ')}\n`;
   return answerRatioCheckbox;
 }
 
