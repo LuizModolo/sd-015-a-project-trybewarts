@@ -50,6 +50,9 @@ function printCasa() {
   return answerHouse;
 }
 
+// formato de seleção checked entendido com o link abaixo:
+// https://backefront.com.br/obter-valor-selecionado-radio-button/
+
 function printRadioCheckbox() {
   const labelFamilyRatio = document.querySelector('input[name="family"]:checked').value;
   const labelLearnCheck = document.querySelectorAll('input[name="learn"]:checked');
